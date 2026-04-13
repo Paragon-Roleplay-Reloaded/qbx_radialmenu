@@ -1,4 +1,4 @@
-local bags = {[40] = true, [41] = true, [44] = true, [45] = true}
+local bags = { [40] = true, [41] = true, [44] = true, [45] = true }
 
 return {
     enableExtraMenu = true,
@@ -94,7 +94,7 @@ return {
                             icon = 'user',
                             label = 'Hair',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Hair'},
+                            args = { id = 'Hair' },
                         },
                         {
                             id = 'ear',
@@ -108,35 +108,35 @@ return {
                             icon = 'user-tie',
                             label = 'Neck',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Neck'},
+                            args = { id = 'Neck' },
                         },
                         {
                             id = 'top',
                             icon = 'shirt',
                             label = 'Top',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Top'},
+                            args = { id = 'Top' },
                         },
                         {
                             id = 'shirt',
                             icon = 'shirt',
                             label = 'Shirt',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Shirt'},
+                            args = { id = 'Shirt' },
                         },
                         {
                             id = 'pants',
                             icon = 'user',
                             label = 'Pants',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Pants'},
+                            args = { id = 'Pants' },
                         },
                         {
                             id = 'shoes',
                             icon = 'shoe-prints',
                             label = 'Shoes',
                             event = 'qb-radialmenu:ToggleClothing',
-                            args = {id = 'Shoes'},
+                            args = { id = 'Shoes' },
                         },
                         {
                             id = 'clothingExtras',
@@ -169,21 +169,21 @@ return {
                                     icon = 'masks-theater',
                                     label = 'Mask',
                                     event = 'qb-radialmenu:ToggleClothing',
-                                    args = {id = 'Mask'},
+                                    args = { id = 'Mask' },
                                 },
                                 {
                                     id = 'vest',
                                     icon = 'vest',
                                     label = 'Vest',
                                     event = 'qb-radialmenu:ToggleClothing',
-                                    args = {id = 'Vest'},
+                                    args = { id = 'Vest' },
                                 },
                                 {
                                     id = 'bag',
                                     icon = 'bag',
                                     label = 'Bag',
                                     event = 'qb-radialmenu:ToggleClothing',
-                                    args = {id = 'Bag'},
+                                    args = { id = 'Bag' },
                                 },
                                 {
                                     id = 'bracelet',
@@ -204,7 +204,7 @@ return {
                                     icon = 'mitten',
                                     label = 'Gloves',
                                     event = 'qb-radialmenu:ToggleClothing',
-                                    args = {id = 'Gloves'},
+                                    args = { id = 'Gloves' },
                                 },
                             },
                         },
@@ -216,6 +216,216 @@ return {
 
     jobItems = {
         police = {
+            {
+                id = 'emergencyButton',
+                icon = 'bell',
+                label = 'Emergency Button',
+                event = 'police:client:SendPoliceEmergencyAlert',
+            },
+            {
+                id = 'resetHouse',
+                icon = 'key',
+                label = 'Reset House Lock',
+                event = 'qb-houses:client:ResetHouse',
+            },
+            {
+                id = 'revokeDriversLicense',
+                icon = 'id-card',
+                label = 'Revoke Drivers License',
+                event = 'police:client:SeizeDriverLicense',
+            },
+            {
+                id = 'policeInteractions',
+                icon = 'list-check',
+                label = 'Police Interactions',
+                items = {
+                    {
+                        id = 'statusCheck',
+                        icon = 'heart-pulse',
+                        label = 'Check Health Status',
+                        event = 'hospital:client:CheckStatus',
+                    },
+                    {
+                        id = 'escort',
+                        icon = 'user-group',
+                        label = 'Escort',
+                        event = 'police:client:EscortPlayer',
+                    },
+                    {
+                        id = 'search',
+                        icon = 'magnifying-glass',
+                        label = 'Search',
+                        event = 'police:client:SearchPlayer',
+                    },
+                    {
+                        id = 'jail',
+                        icon = 'user-lock',
+                        label = 'Jail',
+                        event = 'police:client:JailPlayer',
+                    },
+                },
+            },
+            {
+                id = 'policeObjects',
+                icon = 'road',
+                label = 'Police Objects',
+                items = {
+                    {
+                        id = 'cone',
+                        icon = 'triangle-exclamation',
+                        label = 'Cone',
+                        event = 'police:client:spawnPObj',
+                        args = 'cone',
+                    },
+                    {
+                        id = 'gate',
+                        icon = 'torii-gate',
+                        label = 'Gate',
+                        event = 'police:client:spawnPObj',
+                        args = 'barrier',
+                    },
+                    {
+                        id = 'speedSign',
+                        icon = 'sign-hanging',
+                        label = 'Speed Limit Sign',
+                        event = 'police:client:spawnPObj',
+                        args = 'roadsign',
+                    },
+                    {
+                        id = 'tent',
+                        icon = 'campground',
+                        label = 'Tent',
+                        event = 'police:client:spawnPObj',
+                        args = 'tent',
+                    },
+                    {
+                        id = 'lighting',
+                        icon = 'lightbulb',
+                        label = 'Lighting',
+                        event = 'police:client:spawnPObj',
+                        args = 'light',
+                    },
+                    {
+                        id = 'spikeStrip',
+                        icon = 'caret-up',
+                        label = 'Spikestrip',
+                        event = 'police:client:SpawnSpikeStrip',
+                    },
+                    {
+                        id = 'deleteObject',
+                        icon = 'trash',
+                        label = 'Delete Object',
+                        event = 'police:client:deleteObject',
+                    },
+                },
+            },
+        },
+        bcso = {
+            {
+                id = 'emergencyButton',
+                icon = 'bell',
+                label = 'Emergency Button',
+                event = 'police:client:SendPoliceEmergencyAlert',
+            },
+            {
+                id = 'resetHouse',
+                icon = 'key',
+                label = 'Reset House Lock',
+                event = 'qb-houses:client:ResetHouse',
+            },
+            {
+                id = 'revokeDriversLicense',
+                icon = 'id-card',
+                label = 'Revoke Drivers License',
+                event = 'police:client:SeizeDriverLicense',
+            },
+            {
+                id = 'policeInteractions',
+                icon = 'list-check',
+                label = 'Police Interactions',
+                items = {
+                    {
+                        id = 'statusCheck',
+                        icon = 'heart-pulse',
+                        label = 'Check Health Status',
+                        event = 'hospital:client:CheckStatus',
+                    },
+                    {
+                        id = 'escort',
+                        icon = 'user-group',
+                        label = 'Escort',
+                        event = 'police:client:EscortPlayer',
+                    },
+                    {
+                        id = 'search',
+                        icon = 'magnifying-glass',
+                        label = 'Search',
+                        event = 'police:client:SearchPlayer',
+                    },
+                    {
+                        id = 'jail',
+                        icon = 'user-lock',
+                        label = 'Jail',
+                        event = 'police:client:JailPlayer',
+                    },
+                },
+            },
+            {
+                id = 'policeObjects',
+                icon = 'road',
+                label = 'Police Objects',
+                items = {
+                    {
+                        id = 'cone',
+                        icon = 'triangle-exclamation',
+                        label = 'Cone',
+                        event = 'police:client:spawnPObj',
+                        args = 'cone',
+                    },
+                    {
+                        id = 'gate',
+                        icon = 'torii-gate',
+                        label = 'Gate',
+                        event = 'police:client:spawnPObj',
+                        args = 'barrier',
+                    },
+                    {
+                        id = 'speedSign',
+                        icon = 'sign-hanging',
+                        label = 'Speed Limit Sign',
+                        event = 'police:client:spawnPObj',
+                        args = 'roadsign',
+                    },
+                    {
+                        id = 'tent',
+                        icon = 'campground',
+                        label = 'Tent',
+                        event = 'police:client:spawnPObj',
+                        args = 'tent',
+                    },
+                    {
+                        id = 'lighting',
+                        icon = 'lightbulb',
+                        label = 'Lighting',
+                        event = 'police:client:spawnPObj',
+                        args = 'light',
+                    },
+                    {
+                        id = 'spikeStrip',
+                        icon = 'caret-up',
+                        label = 'Spikestrip',
+                        event = 'police:client:SpawnSpikeStrip',
+                    },
+                    {
+                        id = 'deleteObject',
+                        icon = 'trash',
+                        label = 'Delete Object',
+                        event = 'police:client:deleteObject',
+                    },
+                },
+            },
+        },
+        sasp = {
             {
                 id = 'emergencyButton',
                 icon = 'bell',
@@ -591,110 +801,110 @@ return {
     },
 
     trunkClasses = {
-        [0] = {allowed = true, x = 0.0, y = -1.5, z = 0.0}, -- Coupes
-        [1] = {allowed = true, x = 0.0, y = -2.0, z = 0.0}, -- Sedans
-        [2] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- SUVs
-        [3] = {allowed = true, x = 0.0, y = -1.5, z = 0.0}, -- Coupes
-        [4] = {allowed = true, x = 0.0, y = -2.0, z = 0.0}, -- Muscle
-        [5] = {allowed = true, x = 0.0, y = -2.0, z = 0.0}, -- Sports Classics
-        [6] = {allowed = true, x = 0.0, y = -2.0, z = 0.0}, -- Sports
-        [7] = {allowed = true, x = 0.0, y = -2.0, z = 0.0}, -- Super
-        [8] = {allowed = false, x = 0.0, y = -1.0, z = 0.25}, -- Motorcycles
-        [9] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Off-road
-        [10] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Industrial
-        [11] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Utility
-        [12] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Vans
-        [13] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Cycles
-        [14] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Boats
-        [15] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Helicopters
-        [16] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Planes
-        [17] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Service
-        [18] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Emergency
-        [19] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Military
-        [20] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Commercial
-        [21] = {allowed = true, x = 0.0, y = -1.0, z = 0.25}, -- Trains
+        [0] = { allowed = true, x = 0.0, y = -1.5, z = 0.0 },   -- Coupes
+        [1] = { allowed = true, x = 0.0, y = -2.0, z = 0.0 },   -- Sedans
+        [2] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 },  -- SUVs
+        [3] = { allowed = true, x = 0.0, y = -1.5, z = 0.0 },   -- Coupes
+        [4] = { allowed = true, x = 0.0, y = -2.0, z = 0.0 },   -- Muscle
+        [5] = { allowed = true, x = 0.0, y = -2.0, z = 0.0 },   -- Sports Classics
+        [6] = { allowed = true, x = 0.0, y = -2.0, z = 0.0 },   -- Sports
+        [7] = { allowed = true, x = 0.0, y = -2.0, z = 0.0 },   -- Super
+        [8] = { allowed = false, x = 0.0, y = -1.0, z = 0.25 }, -- Motorcycles
+        [9] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 },  -- Off-road
+        [10] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Industrial
+        [11] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Utility
+        [12] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Vans
+        [13] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Cycles
+        [14] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Boats
+        [15] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Helicopters
+        [16] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Planes
+        [17] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Service
+        [18] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Emergency
+        [19] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Military
+        [20] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Commercial
+        [21] = { allowed = true, x = 0.0, y = -1.0, z = 0.25 }, -- Trains
     },
 
     clothingCommands = {
         top = {
-            Func = function() ToggleClothing({'Top'}) end,
+            Func = function() ToggleClothing({ 'Top' }) end,
             Sprite = 'top',
             Desc = 'Take your shirt off/on',
             Button = 1,
             Name = 'Torso',
         },
         gloves = {
-            Func = function() ToggleClothing({'Gloves'}) end,
+            Func = function() ToggleClothing({ 'Gloves' }) end,
             Sprite = 'gloves',
             Desc = 'Take your gloves off/on',
             Button = 2,
             Name = 'Gloves',
         },
         visor = {
-            Func = function() ToggleProps({'Visor'}) end,
+            Func = function() ToggleProps({ 'Visor' }) end,
             Sprite = 'visor',
             Desc = 'Toggle hat variation',
             Button = 3,
             Name = 'Visor',
         },
         bag = {
-            Func = function() ToggleClothing({'Bag'}) end,
+            Func = function() ToggleClothing({ 'Bag' }) end,
             Sprite = 'bag',
             Desc = 'Opens or closes your bag',
             Button = 8,
             Name = 'Bag',
         },
         shoes = {
-            Func = function() ToggleClothing({'Shoes'}) end,
+            Func = function() ToggleClothing({ 'Shoes' }) end,
             Sprite = 'shoes',
             Desc = 'Take your shoes off/on',
             Button = 5,
             Name = 'Shoes',
         },
         vest = {
-            Func = function() ToggleClothing({'Vest'}) end,
+            Func = function() ToggleClothing({ 'Vest' }) end,
             Sprite = 'vest',
             Desc = 'Take your vest off/on',
             Button = 14,
             Name = 'Vest',
         },
         hair = {
-            Func = function() ToggleClothing({'Hair'}) end,
+            Func = function() ToggleClothing({ 'Hair' }) end,
             Sprite = 'hair',
             Desc = 'Put your hair up/down',
             Button = 7,
             Name = 'Hair',
         },
         hat = {
-            Func = function() ToggleProps({'Hat'}) end,
+            Func = function() ToggleProps({ 'Hat' }) end,
             Sprite = 'hat',
             Desc = 'Take your hat off/on',
             Button = 4,
             Name = 'Hat',
         },
         glasses = {
-            Func = function() ToggleProps({'Glasses'}) end,
+            Func = function() ToggleProps({ 'Glasses' }) end,
             Sprite = 'glasses',
             Desc = 'Take your glasses off/on',
             Button = 9,
             Name = 'Glasses',
         },
         ear = {
-            Func = function() ToggleProps({'Ear'}) end,
+            Func = function() ToggleProps({ 'Ear' }) end,
             Sprite = 'ear',
             Desc = 'Take your ear accessory off/on',
             Button = 10,
             Name = 'Ear',
         },
         neck = {
-            Func = function() ToggleClothing({'Neck'}) end,
+            Func = function() ToggleClothing({ 'Neck' }) end,
             Sprite = 'neck',
             Desc = 'Take your neck accessory off/on',
             Button = 11,
             Name = 'Neck',
         },
         watch = {
-            Func = function() ToggleProps({'Watch'}) end,
+            Func = function() ToggleProps({ 'Watch' }) end,
             Sprite = 'watch',
             Desc = 'Take your watch off/on',
             Button = 12,
@@ -702,14 +912,14 @@ return {
             Rotation = 5.0,
         },
         bracelet = {
-            Func = function() ToggleProps({'Bracelet'}) end,
+            Func = function() ToggleProps({ 'Bracelet' }) end,
             Sprite = 'bracelet',
             Desc = 'Take your bracelet off/on',
             Button = 13,
             Name = 'Bracelet',
         },
         mask = {
-            Func = function() ToggleClothing({'Mask'}) end,
+            Func = function() ToggleClothing({ 'Mask' }) end,
             Sprite = 'mask',
             Desc = 'Take your mask off/on',
             Button = 6,
@@ -717,7 +927,7 @@ return {
         },
 
         pants = {
-            Func = function() ToggleClothing({'Pants', true}) end,
+            Func = function() ToggleClothing({ 'Pants', true }) end,
             Sprite = 'pants',
             Desc = 'Take your pants off/on',
             Name = 'Pants',
@@ -725,7 +935,7 @@ return {
             OffsetY = 0.0,
         },
         shirt = {
-            Func = function() ToggleClothing({'Shirt', true}) end,
+            Func = function() ToggleClothing({ 'Shirt', true }) end,
             Sprite = 'shirt',
             Desc = 'Take your shirt off/on',
             Name = 'shirt',
@@ -746,7 +956,7 @@ return {
             Rotate = true
         },
         bagoff = {
-            Func = function() ToggleClothing({'Bagoff', true}) end,
+            Func = function() ToggleClothing({ 'Bagoff', true }) end,
             Sprite = 'bagoff',
             SpriteFunc = function()
                 local Bag = GetPedDrawableVariation(cache.ped, 5)
